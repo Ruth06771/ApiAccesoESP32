@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<UserSecretsId>90445543-b849-4c80-b450-a884bfaddfc2</UserSecretsId>
+		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<!-- Paquete oficial para PostgreSQL + EF Core -->
+
+		<!-- El driver base de PostgreSQL -->
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.28" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.28" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.28">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Npgsql" Version="9.0.3" />
+
+		<!-- EF Core general -->
+
+		<!-- EF Core Tools -->
+
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+
+		<!-- Opcional: si no usas SQL Server, elimina esta línea -->
+		<!-- <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.5" /> -->
+
+	</ItemGroup>
+
+</Project>
